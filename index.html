@@ -42,23 +42,32 @@ body {
 #particles-js { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
 
 .box {
-    width: 100vw;      /* Lebar penuh skrin */
-    height: 100vh;     /* Tinggi penuh skrin */
-    max-width: 100%;
-    background: transparent; /* Biar nampak warna hijau asal */
-    border-radius: 0;  /* Buang bucu bulat */
+    width: 100vw;
+    min-height: 100vh;
+    background: transparent;
+    border-radius: 0;
     padding: 2rem 1.5rem;
     border: none;
     text-align: center;
-    box-shadow: none;
     margin: 0;
     position: relative;
     z-index: 1;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto; /* Keselamatan: Benarkan scroll jika skrin telefon kariah sangat kecil */
+    
+    /* Rahsia Alignment Penuh Skrin */
     display: flex;
     flex-direction: column;
-    justify-content: space-center; /* Agihkan kandungan dari atas ke bawah */
+    justify-content: center; /* Kumpulkan semula semua elemen di tengah */
+    align-items: center; /* Pastikan semua elemen statik di tengah paksi-X */
+    gap: 1.5rem; /* Berikan ruang nafas yang seragam antara setiap bahagian */
     box-sizing: border-box;
+}
+
+/* Tambahan kecil untuk pastikan elemen di dalam box mengambil lebar penuh */
+.box > * {
+    width: 100%;
+    max-width: 550px; /* Kekalkan saiz maksimum supaya tak terlalu lebar di skrin besar */
 }
 
 .box::before {
