@@ -1,0 +1,21 @@
+{
+  "short_name": "Solat MKSLB",
+  "name": "Waktu Solat MKSLB Premium",
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#02120c",
+  "display": "standalone",
+  "scope": "./",
+  "theme_color": "#053b29"
+}
